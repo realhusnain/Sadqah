@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.LoginScreen">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/masjid_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:src="@mipmap/masjid" />
+
+
+        <TextView
+            android:id="@+id/Welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/masjid_icon"
+            android:layout_marginLeft="10dp"
+            android:text="Welcome!"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Welcome"
+            android:layout_marginLeft="10dp"
+            android:text="Log in using your registration number and\n\nfour-digit pin "
+            android:textColor="@color/grey_description"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/phone_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/input_shape"
+            android:hint="Phone number"
+            android:inputType="phone"
+            android:padding="15dp" />
+
+        <EditText
+
+            android:id="@+id/pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone_no"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/input_shape"
+            android:hint="Pin"
+            android:inputType="numberPassword"
+            android:padding="15dp" />
+
+
+        <TextView
+            android:id="@+id/Forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pin"
+            android:layout_alignEnd="@id/pin"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="2dp"
+            android:text="Forget your pin?"
+            android:textColor="@color/blue"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/register"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/input_blue"
+            android:backgroundTint="@color/blue"
+            android:padding="15dp"
+            android:text="Login"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp">
+
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/input_blue"
+            android:padding="15dp"
+            android:text="Register"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="16sp">
+
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
