@@ -5,12 +5,17 @@ import java.util.List;
 public class MainMasjidModel {
     private int status;
 
+    private final String name;
+    private final String address;
+
     private  List<masjid_listModel> masjid_list;
 
 
 
 
-    public MainMasjidModel(List<masjid_listModel> masjid_list) {
+    public MainMasjidModel(String name, String address, List<masjid_listModel> masjid_list) {
+        this.name = name;
+        this.address = address;
         this.masjid_list = masjid_list;
     }
 
@@ -22,4 +27,15 @@ public class MainMasjidModel {
         return masjid_list;
     }
 
+
+
+
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
 }

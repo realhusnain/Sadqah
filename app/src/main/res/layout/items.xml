@@ -10,8 +10,9 @@
         android:id="@+id/RL_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:padding="10dp"
         android:background="@drawable/input_shape"
         android:backgroundTint="@color/blue"
         android:paddingBottom="5dp">
@@ -37,12 +38,13 @@
 
         <TextView
             android:id="@+id/name"
-            android:layout_width="350dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginLeft="5dp"
-
-            android:padding="5dp"
+            android:padding="3dp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
             android:text="name"
             android:textColor="@color/white"
             android:textSize="18sp">
@@ -52,15 +54,16 @@
 
         <TextView
             android:id="@+id/address"
-            android:layout_width="350dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/name"
             android:layout_marginStart="40dp"
             android:layout_marginLeft="5dp"
-            android:padding="5dp"
+            android:padding="3dp"
             android:text="address"
             android:textColor="@color/white"
-            android:textSize="18sp">
+            android:singleLine="true"
+            android:textSize="15sp">
 
         </TextView>
 

@@ -4,8 +4,8 @@ import java.util.List;
 
 public class masjid_listModel {
 
-    private String name;
-    private String address;
+    private final String name;
+    private final String address;
 
 
     public String getName() {
