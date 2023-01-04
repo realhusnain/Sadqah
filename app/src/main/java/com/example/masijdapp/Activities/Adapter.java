@@ -1,5 +1,6 @@
 package com.example.masijdapp.Activities;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,7 +34,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Adapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull Adapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         masjid_listModel masjid_listModel = masjidListModels.get(position);
         holder.textViewname.setText(masjid_listModel.getName());
         holder.textViewadress.setText(masjid_listModel.getAddress());

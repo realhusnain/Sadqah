@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Activities.LoginScreen">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
 
 
         <ImageView
             android:id="@+id/masjid_icon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
             android:src="@mipmap/masjid" />
 
 
@@ -73,26 +75,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/pin"
-            android:layout_alignEnd="@id/pin"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="2dp"
             android:text="Forget your pin?"
             android:textColor="@color/blue"
             android:textSize="15sp"
             android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">|
 
         <TextView
             android:id="@+id/login"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_above="@+id/register"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="45dp"
             android:background="@drawable/input_blue"
             android:backgroundTint="@color/blue"
+            android:gravity="center"
             android:padding="15dp"
+            android:layout_marginStart="25dp"
             android:text="Login"
-            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="16sp">
 
@@ -103,12 +110,11 @@
             android:id="@+id/register"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerInParent="true"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/input_blue"
             android:padding="15dp"
+            android:layout_marginStart="25dp"
             android:text="Register"
             android:textAlignment="center"
             android:textColor="@color/blue"
@@ -118,7 +124,11 @@
         </TextView>
 
 
-    </RelativeLayout>
+    </LinearLayout>
+
 
 
 </LinearLayout>
+
+
+    </ScrollView>

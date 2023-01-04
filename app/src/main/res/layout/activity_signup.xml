@@ -59,7 +59,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/input_shape"
-                android:hint="Full name"
+                android:hint="First name"
                 android:inputType="textPersonName"
                 android:padding="15dp" />
 
@@ -75,17 +75,44 @@
                 android:inputType="textPersonName"
                 android:padding="15dp" />
 
-            <EditText
-                android:id="@+id/phone_no"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:background="@drawable/input_shape"
-                android:hint="Phone number"
-                android:inputType="phone"
-                android:padding="15dp" />
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/cpp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_autoFormatNumber="false"
+                    app:ccp_countryPreference="PK"
+                    app:ccp_showFlag="false"
+                    app:ccp_showNameCode="false"
+                    app:ccp_showPhoneCode="true"
+                    tools:ccp_textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/phone_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="3dp"
+                    android:layout_toEndOf="@+id/cpp"
+                    android:background="#ffff"
+                    android:hint="Phone number"
+                    android:inputType="phone"
+                    android:textSize="18sp"
+                    app:ccp_autoFormatNumber="false" />
+
+
+            </RelativeLayout>
+
 
             <EditText
                 android:id="@+id/Email"
@@ -99,17 +126,30 @@
                 android:inputType="textEmailAddress"
                 android:padding="15dp" />
 
-            <EditText
-                android:id="@+id/Gender"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/input_shape"
-                android:hint="@string/gender"
-                android:padding="15dp"
-                android:autofillHints="" />
+
+                android:background="@drawable/input_shape">
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:spinnerMode="dropdown">
+
+
+                </Spinner>
+
+
+
+            </RelativeLayout>
+
 
             <EditText
                 android:id="@+id/D0B"
@@ -118,11 +158,10 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
+                android:autofillHints=""
                 android:background="@drawable/input_shape"
                 android:hint="@string/date_of_birth"
-                android:padding="15dp"
-                android:autofillHints=""
-                android:inputType="date" />
+                android:padding="15dp" />
 
             <TextView
 
@@ -135,8 +174,8 @@
                 android:background="@drawable/input_shape"
                 android:hint="@string/masjid_near_to_home_optional"
                 android:padding="15dp"
-                app:drawableTint="@color/grey_description"
-                app:drawableEndCompat="@drawable/ic_baseline_arrow_drop_down_24" />
+                app:drawableEndCompat="@drawable/ic_baseline_arrow_drop_down_24"
+                app:drawableTint="@color/grey_description" />
 
 
             <TextView

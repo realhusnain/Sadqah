@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/DTM"
+        android:icon="@drawable/donate_to_masjid_icon"
+        android:title="Donate to Masjid" />
+    <item
+android:id="@+id/compain"
+        android:icon="@drawable/campaign"
+        android:title="Donate to Campaign" />
+    <item
+        android:icon="@drawable/donation_histoy_white"
+        android:title="Donation History" />
+
+    <item
+        android:id="@+id/salah_time"
+        android:icon="@drawable/salah"
+        android:title="Salah Time" />
+    <item
+        android:id="@+id/Feedbackk"
+        android:icon="@drawable/feedback"
+        android:title="Feedback" />
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_baseline_logout_24"
+        android:title="Log out" />
+
+</menu>
