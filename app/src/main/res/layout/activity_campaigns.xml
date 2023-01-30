@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -57,7 +56,6 @@
             android:textSize="17sp"
             android:textStyle="bold">
 
-
         </TextView>
     </RelativeLayout>
 
@@ -76,29 +74,225 @@
 
         </TextView>
 
+
     </RelativeLayout>
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/homeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/image5" />
+
+
+            <ImageView
+                android:id="@+id/playbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/homeImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="41dp"
+                android:background="@drawable/play1"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/homeImage"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/timesound"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_toRightOf="@+id/homeImage"
+                android:src="@drawable/image6" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/image2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="41dp"
+                android:background="@drawable/play1"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/image2"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/timesound"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_toRightOf="@+id/image2"
+                android:src="@drawable/image7" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/image3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="41dp"
+                android:background="@drawable/play1"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/image3"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/timesound"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_toRightOf="@+id/image3"
+                android:src="@drawable/image5" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/image4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="41dp"
+                android:background="@drawable/play1"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/image5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_toRightOf="@id/image4"
+                android:src="@drawable/image6" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/image4"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/timesound"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/image5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="41dp"
+                android:background="@drawable/play1"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/tv_donate"
-            android:layout_width="121dp"
+        <HorizontalScrollView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="100dp"
-            android:background="@drawable/input_blue"
-            android:backgroundTint="@color/blue"
-            android:gravity="center"
+            android:layout_marginTop="10dp"
+            tools:ignore="SpeakableTextPresentCheck">
 
-            android:padding="15dp"
-            android:text="Donate"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/picture11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:src="@drawable/image5" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/image6" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/image7" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/image5" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/image6" />
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
 
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/input_blue"
+        android:backgroundTint="@color/blue"
+        android:gravity="center"
+
+        android:padding="15dp"
+        android:text="Donate"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 
 </LinearLayout>

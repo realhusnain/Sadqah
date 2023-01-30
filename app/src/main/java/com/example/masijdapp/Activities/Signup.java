@@ -56,7 +56,7 @@ public class Signup extends AppCompatActivity implements OnItemClick {
     DatePickerDialog datePickerDialog;
     EditText phoneNumber, email, date;
 
-    private static final String[] genderItem = {"Select Gender", "Male", "Female"};
+    private static final String[] genderItem   = {"Select Gender", "Male", "Female"};
 
 
     @Override
@@ -187,7 +187,7 @@ public class Signup extends AppCompatActivity implements OnItemClick {
         String emailInput = email.getText().toString();
 
         if (emailInput.isEmpty()) {
-            email.setError("field cant be empty");
+            email.setError("Field cant be empty");
             return false;
 
         } else if (!emailInput.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()) {

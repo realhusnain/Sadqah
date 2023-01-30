@@ -1,110 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Activities.Feedback">
-
-    <ImageView
-        android:id="@+id/masjid_icon"
-        android:layout_width="100dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:src="@mipmap/masjid">
-
-    </ImageView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20sp"
-        android:text="How was your experience with Sadaqah?"
-        android:textColor="@color/black"
-        android:textSize="14sp">
-
-    </TextView>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/happy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="40dp"
-            android:src="@drawable/smile1" />
-
-        <ImageView
-            android:id="@+id/neutral"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginTop="40dp"
-            android:layout_toRightOf="@+id/happy"
-            android:src="@drawable/neutral1" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="75dp"
-            android:layout_marginTop="40dp"
-            android:layout_toRightOf="@id/neutral"
-            android:src="@drawable/sad1" />
-    </RelativeLayout>
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Activities.Feedback">
+
+        <ImageView
+            android:id="@+id/masjid_icon"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/masjid">
+
+        </ImageView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20sp"
-            android:layout_marginTop="30dp"
-            android:text="Additional Comment"
+            android:text="How was your experience with Sadaqah?"
             android:textColor="@color/black"
-            android:textSize="14sp"
-            android:textStyle="bold"/>
-
-
-        <EditText
-            android:id="@+id/feedback"
-            android:layout_width="355dp"
-            android:layout_height="130dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/input_shape"
-            android:hint="Feedback"
-            android:paddingStart="20dp"
-            android:paddingBottom="70dp"
-            android:textColorHint="@color/grey_description" />
-
-
-        <TextView
-            android:id="@+id/send"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/register"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="130dp"
-            android:background="@drawable/input_blue"
-            android:backgroundTint="@color/blue"
-            android:padding="15dp"
-            android:text="Send"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold">
-
+            android:textSize="14sp">
 
         </TextView>
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/happy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/smile1" />
+
+            <ImageView
+                android:id="@+id/neutral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@+id/happy"
+                android:src="@drawable/neutral1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@id/neutral"
+                android:src="@drawable/sad1" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="30dp"
+                android:text="Additional Comment"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/feedback"
+                android:layout_width="355dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_shape"
+                android:hint="Feedback"
+                android:paddingStart="20dp"
+                android:paddingBottom="70dp"
+                android:textColorHint="@color/grey_description" />
+
+
+            <TextView
+                android:id="@+id/send"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/register"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="130dp"
+                android:background="@drawable/input_blue"
+                android:backgroundTint="@color/blue"
+                android:padding="15dp"
+                android:text="Send"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold">
+
+
+            </TextView>
+
+        </LinearLayout>
+
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

@@ -1,18 +1,20 @@
 package com.example.masijdapp.Activities;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.masijdapp.R;
 import com.google.android.material.navigation.NavigationView;
@@ -21,8 +23,12 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity {
     TextView drawerbtn, tv_DT_masjid, campainn;
     DrawerLayout drawerLayout;
-    TextView imageview;
+    ImageView imageview;
+    ImageView IV_dp;
+    Uri imageUri;
     NavigationView navigationView;
+
+    private static final int SELECT_PICTURE = 1;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -33,9 +39,13 @@ public class MainActivity extends AppCompatActivity {
         navigationView = findViewById(R.id.navigationview);
         tv_DT_masjid = findViewById(R.id.donatetomasjid);
         campainn = findViewById(R.id.campaign);
+        drawerLayout = findViewById(R.id.drawerLayout);
 
         View header = navigationView.getHeaderView(0);
         imageview = header.findViewById(R.id.imagePicker);
+        IV_dp = header.findViewById(R.id.sandraimg);
+
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -59,6 +69,17 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+        drawerbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (!drawerLayout.isDrawerOpen(GravityCompat.START))
+                    drawerLayout.openDrawer(GravityCompat.START);
+                else drawerLayout.closeDrawer(GravityCompat.END);
+
+
+            }
+        });
         campainn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,26 +97,21 @@ public class MainActivity extends AppCompatActivity {
         imageview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(), "hi", Toast.LENGTH_LONG).show();
-
+                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(intent, SELECT_PICTURE);
             }
         });
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK && requestCode == SELECT_PICTURE) {
+            imageUri = data.getData();
+            IV_dp.setImageURI(imageUri);
 
-        drawerLayout = findViewById(R.id.drawerLayout);
-
-        drawerbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if (!drawerLayout.isDrawerOpen(GravityCompat.START))
-                    drawerLayout.openDrawer(GravityCompat.START);
-                else drawerLayout.closeDrawer(GravityCompat.END);
-
-
-            }
-        });
-
-
+        }
     }
 }
